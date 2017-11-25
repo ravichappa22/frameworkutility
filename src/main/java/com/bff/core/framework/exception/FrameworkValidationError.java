@@ -18,7 +18,7 @@ public class FrameworkValidationError extends FrameworkError implements Iterable
 	 * @param details
 	 *            A {@link Map} containing a list of additional details
 	 *            pertinent to the error. Eg,
-	 *            (account=123,operator=ABC,biller=CSG)
+	 *            (account=123,operator=ABC,source of error =Other service)
 	 * @param cause
 	 *            The root cause
 	 */
@@ -34,7 +34,7 @@ public class FrameworkValidationError extends FrameworkError implements Iterable
 	 * @param details
 	 *            A {@link Map} containing a list of additional details
 	 *            pertinent to the error. Eg,
-	 *            (account=123,operator=ABC,biller=CSG)
+	 *            (account=123,operator=ABC,source of error =Other service)
 	 */
 	public FrameworkValidationError(String code, Map<String, Object> details) {
 		super(code, details);
@@ -51,7 +51,7 @@ public class FrameworkValidationError extends FrameworkError implements Iterable
 	 * @param details
 	 *            A {@link Map} containing a list of additional details
 	 *            pertinent to the error. Eg,
-	 *            (account=123,operator=ABC,biller=CSG)
+	 *            (account=123,operator=ABC,source of error =Other service)
 	 */
 	public FrameworkValidationError(String code, List<String> validationCodes, Map<String, Object> details) {
 		super(code, details);
@@ -75,7 +75,7 @@ public class FrameworkValidationError extends FrameworkError implements Iterable
 	 * @param details
 	 *            A {@link Map} containing a list of additional details
 	 *            pertinent to the error. Eg,
-	 *            (account=123,operator=ABC,biller=CSG)
+	 *            (account=123,operator=ABC,source of error =Other service)
 	 * @param cause
 	 *            The root cause
 	 */
@@ -95,7 +95,7 @@ public class FrameworkValidationError extends FrameworkError implements Iterable
 	 * @param details
 	 *            A {@link Map} containing a list of additional details
 	 *            pertinent to the error. Eg,
-	 *            (account=123,operator=ABC,biller=CSG)
+	 *            (account=123,operator=ABC,source of error =Other service)
 	 */
 	public FrameworkValidationError(String code, Object[] messageArgs, Map<String, Object> details) {
 		super(code, messageArgs, details);
@@ -126,7 +126,7 @@ public class FrameworkValidationError extends FrameworkError implements Iterable
 	 * @param details
 	 *            A {@link Map} containing a list of additional details
 	 *            pertinent to the error. Eg,
-	 *            (account=123,operator=ABC,biller=CSG)
+	 *            (account=123,operator=ABC,source of error =Other service)
 	 */
 	public FrameworkValidationError(String code, String message, Map<String, Object> details) {
 		super(code, message, details);

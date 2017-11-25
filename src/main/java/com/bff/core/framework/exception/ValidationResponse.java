@@ -25,8 +25,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
         "message",
         "code",
         "type",
-        "validationMessages",
-        "detailMap"
+        "validations",
+        "details"
 })
 @XmlRootElement(name = "ValidationResponse")
 public class ValidationResponse {
@@ -128,19 +128,28 @@ public class ValidationResponse {
     public void setType(String type) {
         this.type = type;
     }
-    public void setDetails(Map<String,Object> details) {
+   /* public void setDetails(Map<String,Object> details) {
         this.detailMap = details;
     }
     public Map<String,Object> getDetails() {
         return this.detailMap;
     }
-
+*/
+    
 
     public void addValidationMessage(ServiceMessage message) {
         this.validationMessages.add(message);
     }
 
-    public void addValidationMessages(ServiceMessage...messages) {
+    public Map<String, Object> getDetailMap() {
+		return detailMap;
+	}
+
+	public void setDetailMap(Map<String, Object> detailMap) {
+		this.detailMap = detailMap;
+	}
+
+	public void addValidationMessages(ServiceMessage...messages) {
         if(messages!=null) {
             for(ServiceMessage msg : messages) {
                 this.addValidationMessage(msg);

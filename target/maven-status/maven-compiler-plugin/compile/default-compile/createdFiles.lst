@@ -1,0 +1,8 @@
+com\bff\core\framework\exception\Message.class
+com\bff\core\framework\exception\HttpServiceException.class
+com\bff\core\framework\exception\FrameworkValidationError.class
+com\bff\core\framework\exception\ServiceException.class
+com\bff\core\framework\exception\ErrorResponse.class
+com\bff\core\framework\exception\FrameworkError.class
+com\bff\core\framework\exception\ServiceMessage.class
+com\bff\core\framework\exception\ValidationResponse.class

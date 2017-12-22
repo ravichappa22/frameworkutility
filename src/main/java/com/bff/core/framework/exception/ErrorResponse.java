@@ -14,7 +14,6 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.util.StringUtils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -110,9 +109,9 @@ public class ErrorResponse {
 	}
 
 	private void parseException(Throwable thrown) {
-		/*if (thrown instanceof ValidationServiceException) {
+		if (thrown instanceof ValidationServiceException) {
 			this.parseValidationException((ValidationServiceException) thrown);
-		} else*/ 
+		} else 
 		if (thrown instanceof HttpServiceException) {
 			this.parseHttpServiceException((HttpServiceException) thrown);
 		} else if (thrown instanceof ServiceException) {
@@ -120,13 +119,13 @@ public class ErrorResponse {
 		}
 	}
 
-	/*private void parseValidationException(ValidationServiceException ex) {
+	private void parseValidationException(ValidationServiceException ex) {
 		this.parseHttpServiceException(ex);
 		this.validationMessages = new ArrayList<>();
 		for (ServiceMessage msg : ex) {
 			this.validationMessages.add(msg.getText());
 		}
-	}*/
+	}
 
 	private void parseHttpServiceException(HttpServiceException ex) {
 		this.parseServiceException(ex);

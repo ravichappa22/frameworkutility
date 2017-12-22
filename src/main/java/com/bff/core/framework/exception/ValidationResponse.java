@@ -29,7 +29,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
         "details"
 })
 @XmlRootElement(name = "ValidationResponse")
-public class ValidationResponse {
+public class ValidationResponse{
 	
 	@JsonProperty
     @XmlElement(name = "message", required = true)

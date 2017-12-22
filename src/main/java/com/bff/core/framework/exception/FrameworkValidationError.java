@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-public class FrameworkValidationError extends FrameworkError implements Iterable<Message> {
+public class FrameworkValidationError extends FrameworkError {
 
 	private static final long serialVersionUID = 1L;
 	private List<Message> validationMessages;
@@ -187,14 +187,16 @@ public class FrameworkValidationError extends FrameworkError implements Iterable
 		}
 	}
 
-	@Override
-	public Iterator<Message> iterator() {
-		return this.validationMessages.iterator();
-	}
+	
 
 	@Override
 	public String toString() {
 		return "FrameworkValidationError [toString()=" + super.toString() + ", validationMessages=" + validationMessages
 				+ "]";
 	}
+
+	/*@Override
+	public Iterator<Message> iterator() {
+		return this.validationMessages.iterator();
+	}*/
 }
